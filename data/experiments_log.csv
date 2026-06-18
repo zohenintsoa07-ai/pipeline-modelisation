@@ -1,0 +1,11 @@
+timestamp,notebook,phase,model,auc,threshold,n_test,params
+2026-06-15T19:24:23,01_pipeline_etl,Phase 4 — évaluation initiale,"Logit GLM (statsmodels, sans correction)",0.6738,0.05,2517,"{""correction"": ""aucune"", ""seuil_strategie"": ""fixe""}"
+2026-06-15T19:24:23,01_pipeline_etl,Phase 4 — redressement du seuil,"Logit GLM (statsmodels, seuil de Youden)",0.6738,0.011648,2517,"{""correction"": ""seuil optimisé a posteriori"", ""seuil_strategie"": ""Youden (J = TPR - FPR)""}"
+2026-06-15T19:26:12,02_modelisation_ml_benchmark,Phase 5,LR sans correction (baseline),0.6738,0.05,2517,"{""correction"": ""aucune"", ""seuil_strategie"": ""fixe""}"
+2026-06-15T19:26:12,02_modelisation_ml_benchmark,Phase 5,LR class_weight='balanced',0.6802,0.586137,2517,"{""correction"": ""class_weight='balanced'"", ""seuil_strategie"": ""Youden""}"
+2026-06-15T19:26:13,02_modelisation_ml_benchmark,Phase 6,Random Forest (balanced_subsample),0.7038,0.5211,2517,"{""correction"": ""class_weight='balanced_subsample'"", ""seuil_strategie"": ""Youden"", ""n_estimators"": 300, ""class_weight"": ""balanced_subsample"", ""max_depth"": 8, ""min_samples_leaf"": 3, ""max_features"": ""sqrt""}"
+2026-06-15T19:26:13,02_modelisation_ml_benchmark,Phase 6b,LR + SMOTE,0.6721,0.608557,2517,"{""correction"": ""SMOTE (rééchantillonnage)"", ""seuil_strategie"": ""Youden"", ""sampling_strategy"": ""auto""}"
+2026-06-15T19:38:45,02_modelisation_ml_benchmark,Phase 5,LR sans correction (baseline),0.6738,0.05,2517,"{""correction"": ""aucune"", ""seuil_strategie"": ""fixe""}"
+2026-06-15T19:38:45,02_modelisation_ml_benchmark,Phase 5,LR class_weight='balanced',0.6802,0.586137,2517,"{""correction"": ""class_weight='balanced'"", ""seuil_strategie"": ""Youden""}"
+2026-06-15T19:38:46,02_modelisation_ml_benchmark,Phase 6,Random Forest (balanced_subsample),0.7038,0.5211,2517,"{""correction"": ""class_weight='balanced_subsample'"", ""seuil_strategie"": ""Youden"", ""n_estimators"": 300, ""class_weight"": ""balanced_subsample"", ""max_depth"": 8, ""min_samples_leaf"": 3, ""max_features"": ""sqrt""}"
+2026-06-15T19:38:46,02_modelisation_ml_benchmark,Phase 6b,LR + SMOTE,0.6721,0.608557,2517,"{""correction"": ""SMOTE (rééchantillonnage)"", ""seuil_strategie"": ""Youden"", ""sampling_strategy"": ""auto""}"
